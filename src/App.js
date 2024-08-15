@@ -68,7 +68,7 @@ function App() {
     
         <div className='header containerLine'>
         <img className='headerImage' src='https://img.icons8.com/?size=100&id=wv8L54LM9yiu&format=png&color=000000' width='80px' alt='icon'/>
-          <a href='https://bobbyhadz.com/blog/react-button-link' target='_blank' rel="noreferrer">
+          <a href='https://react-recipes-app-api-edamam.netlify.app/' target='_blank' rel="noreferrer">
             <button className='btnLink'>Recipes</button>
           </a>
         </div>
