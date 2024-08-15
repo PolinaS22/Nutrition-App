@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+body {
+    background-color: rgba(185, 185, 185, 0.308);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* upper btn */
+.containerLine {
+    border-bottom: 2px solid rgb(131, 131, 131);
+    padding: 5px;
+}
+.btnLink {
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 22px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    
+}
+.headerImage {
+   margin-left: 30px;
+   margin-right: 10px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+/* products */
+.productsCont {
+    background-image: url(https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    min-height: 300px;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 20px;
+}
+.innerContProducts {
+    background-color: rgba(240, 255, 255, 0.76);
+    min-height: 290px;
+}
+.calories {
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+.calories p {
+    margin-bottom: 3px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3px;
+    font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* nutrients */
+.box {
+    background-color: rgba(211, 210, 210, 0.692);
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+.nutrient {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    min-width: 360px;
 }
 
-.App-link {
-  color: #61dafb;
+.container, .innerContProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    margin: 10px;
+    letter-spacing: 1px;
+    color: rgb(41, 0, 68);
+    text-shadow: 0 0 5px rgba(57, 0, 83, 0.705);
+}
+h4 {
+    font-family: "Open Sans", sans-serif;    
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px;
+    color: rgb(41, 0, 68);
+}
+.instruction {
+    display: flex;
+    align-items: center;
+}
+
+.submit {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Open Sans", sans-serif;    
+    font-size: 15px;
+    background-color: rgba(119, 78, 231, 0.192);
+}
+input {
+    font-family: "Open Sans", sans-serif;    
+    font-size: 18px;
+    background-color: rgba(167, 140, 243, 0.192);
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    color: rgb(41, 0, 68);
+
+}
+
+@media all and (max-width: 600px) {
+    p {
+        font-size: 17px;
+    }
+    h4 {
+        font-size: 21px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    input {
+        width: 250px;
+    }
+    .productsCont {
+        width: 300px;
+        min-height: 150px;
+        padding: 18px;
+    }
+    .innerContProducts {
+        background-color: rgba(240, 255, 255, 0.76);
+        min-height: 290px;
+    }
+    .nutrient {
+        min-width: 260px;
+    }
 }
