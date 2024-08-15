@@ -14,7 +14,7 @@ function App() {
   const [mySearch, setMySearch] = useState('');
   const [nutrition, setNutrition] = useState();
   const [wordSubmitted, setWordSubmitted] = useState('');
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   const [par, setPar] = useState([])
    
@@ -29,6 +29,8 @@ function App() {
  
 
   const getNutrition = async (ingr) => {
+    setLoader(true)
+
     const response = await fetch(`https://api.edamam.com/api/nutrition-details?app_id=${API_ID}&app_key=${API_KEY}`, {
       method: 'POST',
       headers: {
