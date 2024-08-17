@@ -29,8 +29,7 @@ function App() {
  
 
   const getNutrition = async (ingr) => {
-    setLoader(true)
-
+    setLoader(true);
     const response = await fetch(`https://api.edamam.com/api/nutrition-details?app_id=${API_ID}&app_key=${API_KEY}`, {
       method: 'POST',
       headers: {
@@ -52,7 +51,6 @@ function App() {
       });
     }
   }
-
  
   useEffect(() => {
     if (wordSubmitted !== ''){
@@ -84,7 +82,7 @@ function App() {
 
           <form className='container-input' onSubmit={ formSubmit }>
             <input type='text' onChange={ getInput } value={mySearch}/>
-            <button className='submit' type='submit' onChange={ formSubmit }>Submit</button>
+            <button className='submit' type='submit'>Submit</button>
           </form>
         </div>
 
@@ -98,11 +96,11 @@ function App() {
             <h4>The Nutritional Value</h4>
           </div>
             {      
-              nutrition && Object.values(nutrition.totalNutrients).map((item, id) => (
-                <Info key={id} 
-                label ={item.label}
-                quantity={item.quantity}
-                unit={item.unit}/>
+              nutrition && Object.values(nutrition.totalNutrients).map((item, idx) => (
+                <Info key={ idx } 
+                label ={ item.label } 
+                quantity={ item.quantity }
+                unit={ item.unit}/>
               ))
             }
         </div>  

@@ -4,8 +4,8 @@ export const Ingr = ( { par, nutrition } ) => {
             <div className="innerContProducts">
                 <h4>Products:</h4>
                 <div>
-                    {par.map((element, id) => (
-                        <p className="ingredient" key={ id }>
+                    {par.map((element, idx) => (
+                        <p className="ingredient" key={ idx }>
                             <img src='https://img.icons8.com/?size=100&id=MkFMsOJRAJYW&format=png&color=000000' width='20px' alt='icon'/>
                             { element }
                             </p>
