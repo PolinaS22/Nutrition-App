@@ -75,7 +75,7 @@ function App() {
         </div>
 
         <div className='containerLine container'>
-          <h1>Nutrition App</h1>
+          <h1>NutriSearch</h1>
           <div className='instruction'>
              <p>Please, separate products with comma.</p>
              <img src='https://img.icons8.com/?size=100&id=40018&format=png&color=000000' alt='comma' width='25px'/>
