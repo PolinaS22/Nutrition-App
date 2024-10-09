@@ -17,15 +17,6 @@ function App() {
   const [loader, setLoader] = useState(false);
 
   const [par, setPar] = useState([])
-   
- const getInput = (e) => {
-    setMySearch(e.target.value);
-  }
-
-  const formSubmit = (e) => {
-    e.preventDefault();
-    setWordSubmitted(mySearch)
-  }
  
 
   const getNutrition = async (ingr) => {
@@ -33,6 +24,7 @@ function App() {
     const response = await fetch(`https://api.edamam.com/api/nutrition-details?app_id=${API_ID}&app_key=${API_KEY}`, {
       method: 'POST',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ ingr })
@@ -46,10 +38,19 @@ function App() {
       setLoader(false);
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Something went wrong! Submit ingredients correctly!"
+        title: "Something went wrong!",
+        text: "Submit ingredients correctly (amount and products)! Example: '1 apple, 2 bananas etc'"
       });
     }
+  }
+ 
+  const getInput = (e) => {
+    setMySearch(e.target.value);
+  }
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+    setWordSubmitted(mySearch)
   }
  
   useEffect(() => {
@@ -68,7 +69,7 @@ function App() {
     
         <div className='header containerLine'>
         <img className='headerImage' src='https://img.icons8.com/?size=100&id=wv8L54LM9yiu&format=png&color=000000' width='80px' alt='icon'/>
-          <a href='https://react-recipes-app-api-edamam.netlify.app/' target='_blank' rel="noreferrer">
+          <a href='https://recipes-react-api-app.netlify.app' target='_blank' rel="noreferrer">
             <button className='btnLink'>Recipes</button>
           </a>
         </div>
